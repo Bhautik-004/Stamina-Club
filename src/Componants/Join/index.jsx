@@ -10,12 +10,8 @@ const form = useRef();
 const sendEmail = (e) => {
   e.preventDefault();
 
-  emailjs.sendForm(serviceID, templateID, templateParams, publicKey)
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
+  emailjs.sendForm('service_0n7y0uc', 'template_1xeoogn', form.current, 's-TJJH-az0IdCy2AU')
+  e.target.reset();
 };
 
   return (
